@@ -1,13 +1,25 @@
-set cindent
+
+"syntax on
+"colorscheme torte  "use in putty"
 
 set number
+set enc=utf8
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
+"use tab key as usual"
+set smarttab
+set autoindent
+set smartindent
 
-set wrap
+"tab transfer to space"
+"set cinent "auto indent"
+"set tabstop=4
+"set softtabstop=4
+"set shiftwidth=4
+"set expandtab
+
+set wrap   "folding"
+set hls    "highlight keyword"
+
 
 filetype on
 
@@ -22,7 +34,11 @@ let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_show_One_File = 1   "Only Show the current file's tag"
 let Tlist_Exit_OnlyWindow = 1  "If taglist is the last window, then exit"
 let Tlist_Use_Right_Window = 1  "Show the taglist window at the right side"
-"let Tlist_Auto_Open = 1 "Default Open taglist"
+let Tlist_Auto_Open = 1 "Default Open taglist"
+
+
+"ctags settings"
+set tags=./tags,./TAGS,tags;~,TAGS;~
 
 
 map <f2> :NERDTreeToggle<CR>
